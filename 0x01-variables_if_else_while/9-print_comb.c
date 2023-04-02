@@ -15,8 +15,8 @@ int main(void)
 		i++;
 		if (i != 58)
 		{
-	        	putchar(',');
-	        	putchar(' ');
+			putchar(',');
+			putchar(' ');
 		}
 	}
 	putchar('\n');
