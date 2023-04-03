@@ -20,22 +20,24 @@ int main(void)
 			c = 48;
 			while (c < 58)
 			{
-				if (a < b && b < a && a != b && b != c && c != a)
+				if (b != a && b != c && a != c && b < a && a < c)
 				{
 					putchar(b);
 					putchar(a);
 					putchar(c);
-				}
-				if (b == 55 && a == 56 && c == 57)
-				{
-					break;
+					if (a == 56 && b == 55 && c == 57)
+					{
+						break;
+					}
+					putchar(',');
+					putchar(' ');
 				}
 				c++;
 			}
 			a++;
-		}		
+		}
 		b++;
 	}
-	putchar('n');
+	putchar('\n');
 	return (0);
 }
