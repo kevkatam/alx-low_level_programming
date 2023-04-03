@@ -1,48 +1,48 @@
 #include <stdio.h>
+
 /**
- * main - print numbers 00 to 99
+ * main - Prints numbers between 00 to 99.
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int a, b, c, d, op1, op2;
+int i, e, g, h, op1, op2;
 
-	a = b = c = d = 48;
-
-	while (d < 58)
+i = e = g = h = 48;
+while (h < 58)
+{
+	g = 48;
+	while (g < 58)
 	{
-		c = 48;
-		while (c < 58)
+		e = 48;
+		while (e < 58)
 		{
-			b = 48;
-			while (b < 58)
+			i = 48;
+			while (i < 58)
 			{
-				a = 48;
-				while (a < 58)
+				op1 = (h * 10) + g;
+				op2 = (e * 10) + i;
+				if (op1 < op2)
 				{
-					op1 = (d * 10) + c;
-					op2 = (b * 10) + a;
-					if (op1 > op2)
-					{
-						putchar(d);
-						putchar(c);
-						putchar(' ');
-						putchar(b);
-						putchar(a);
-						if (d == 57 && c == 56 && b == 57 && a == 57)
-							break;
-						putchar(',');
-						putchar(' ');
-					}
-					a++;
+					putchar(h);
+					putchar(g);
+					putchar(' ');
+					putchar(e);
+					putchar(i);
+					if (h == 57 && g == 56 && e == 57 && i == 57)
+						break;
+					putchar(',');
+					putchar(' ');
 				}
-				b++;
+				i++;
 			}
-			c++;
+			e++;
 		}
-		d++;
+		g++;
 	}
-	putchar('\n');
-	return (0);
+	h++;
+}
+putchar('\n');
+return (0);
 }
