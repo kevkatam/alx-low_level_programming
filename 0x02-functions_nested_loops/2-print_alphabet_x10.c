@@ -7,9 +7,8 @@ void print_alphabet_x10(void)
 {
 	int i;
 	int a;
-	a = 0;
 
-	while (a <= 9)
+	for(a = 0; a <= 9; a++)
 	{
 		for (i = 97; i <= 122; i++)
 		{
@@ -17,5 +16,4 @@ void print_alphabet_x10(void)
 		}
 	}
 	_putchar('\n');
-	a++;
 }
