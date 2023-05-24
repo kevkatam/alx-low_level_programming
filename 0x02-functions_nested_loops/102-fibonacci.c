@@ -11,7 +11,11 @@ int main(void)
 
 	for (i = 0; i < 50; i++)
 	{
-		printf("%ld ", b);
+		printf("%ld",b);
+		if (i != 49)
+		{
+			printf(", ");
+		}
 		temp = b;
 		b = a + b;
 		a = temp;
