@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_squa - prints a square
+ * print_square - prints a square
  * @size: input integer
  * Return: no return
  */
@@ -14,7 +14,7 @@ void print_square(int size)
 		{
 			_putchar(35);
 		}
-		if (i != size -1)
+		if (i != size - 1)
 		{
 			_putchar('\n');
 		}
