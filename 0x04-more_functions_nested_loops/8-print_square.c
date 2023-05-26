@@ -14,7 +14,7 @@ void print_square(int size)
 		{
 			_putchar(35);
 		}
-		if (size <= 0)
+		if (i != size -1)
 		{
 			_putchar('\n');
 		}
