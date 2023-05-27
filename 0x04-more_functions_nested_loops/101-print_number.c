@@ -20,13 +20,13 @@ void print_number(int n)
 	i = j;
 	count = 1;
 	
-	while (i < 9)
+	while (i > 9)
 	{
 		i = i / 10;
-		count = count *10;
+		count = count * 10;
 	}
 
-	for (; count >= 1; count = count /10)
+	for (; count >= 1; count = count / 10)
 	{
 		_putchar(((j / count) % 10 + 48));
 	}
