@@ -8,12 +8,12 @@ void _puts(char *str)
 {
 	int count = 0;
 
+	if (str[count] == '\0')
+	{
+		_putchar('\n');
+	}
 	while (str[count] != '\0')
 	{
-		if (str[count] == '\0')
-		{
-			_putchar('\n');
-		}
 		_putchar(str[count]);
 		count++;
 	}
