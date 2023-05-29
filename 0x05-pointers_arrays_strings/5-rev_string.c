@@ -10,8 +10,7 @@ void rev_string(char *s)
 
 	while (s[count] != '\0')
 	{
-		_putchar(s[count]);
-		_putchar('\n');
+		_putchar(s[count]);	
 		count++;
 	}
 	i = 0;
