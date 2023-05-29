@@ -6,9 +6,9 @@
  */
 void print_rev(char *s)
 {
-	int count = s['\0'];
+	int count = _strlen(s);
 
-	while (count > s['\0'])
+	while (count >= 0 )
 	{
 		_putchar(s[count]);
 		count--;
