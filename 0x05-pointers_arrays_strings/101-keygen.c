@@ -14,10 +14,10 @@ int main(void)
 	while (j < 2772)
 	{
 		i = rand() % 128;
-		if ((i + j) > 2772)
+		if ((j + i) > 2772)
 			break;
 		j = j + i;
-		printf("%c", j);
+		printf("%c", i);
 	}
 	printf("%c\n", (2772 - j));
 	return (0);
