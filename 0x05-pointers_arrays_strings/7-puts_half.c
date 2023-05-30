@@ -4,7 +4,7 @@
  * @str: input string
  * Return: no return
  */
- void puts_half(char *str)
+void puts_half(char *str)
 {
 	int count = 0, n;
 	
@@ -22,7 +22,7 @@
 	}
 	else
 	{
-		n = (count - 1)/ 2;
+		n = (count - 1) / 2;
 	}
 	for (n++; n < count; n++)
 	{
