@@ -11,7 +11,7 @@ char *leet(char *str)
 	int upper[] = {65, 69, 79, 84, 76};
 	int numbers[] = {52, 51, 48, 55, 49};
 
-	while (*(str + count) != '0')
+	while (*(str + count) != '\0')
 	{
 		for (i = 0; i < 5; i++)
 		{
