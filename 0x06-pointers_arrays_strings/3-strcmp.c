@@ -3,8 +3,7 @@
  * _strcmp - compares two strings
  * @s1: first string
  * @s2: second string
- * Return: 0 if s1 and s2 are equal, negative integer if s1 < s2
- * positive integer if s1 > s2
+ * Return: 0 if s1 and s2 are equal, another number if not
  */
 int _strcmp (char *s1, char *s2)
 {
