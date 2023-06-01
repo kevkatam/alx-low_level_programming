@@ -17,7 +17,7 @@ char *_strcat(char *dest, char *src)
 	while (count1 >= 0)
 	{
 		(*(dest + count)) = (*(src + count1));
-		if (*(src + count) == '\0')
+		if (*(src + count1) == '\0')
 			break;
 		count++;
 		count1;
