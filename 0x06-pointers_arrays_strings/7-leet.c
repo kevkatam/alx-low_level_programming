@@ -15,7 +15,7 @@ char *leet(char *str)
 	{
 		for (i = 0; i < 5; i++)
 		{
-			if(*(str + count) == low[i] || *(str + count) == upper[i])
+			if (*(str + count) == low[i] || *(str + count) == upper[i])
 			{
 				*(str + count) = numbers[i];
 				break;
