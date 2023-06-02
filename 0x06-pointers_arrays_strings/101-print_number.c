@@ -24,7 +24,7 @@ void print_number(int n)
 		b = b /10;
 		count = count * 10;
 	}
-	for(; count >= 1; count = count / 10)
+	for (; count >= 1; count = count / 10)
 	{
 		_putchar(((a / count) % 10) + 48);
 	}
