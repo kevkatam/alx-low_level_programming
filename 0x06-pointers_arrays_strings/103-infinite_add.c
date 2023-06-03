@@ -1,6 +1,5 @@
 #include "main.h"
 #include "stdio.h"
-#include "stdlib.h"
 /**
  * infinite_add - adds two numbers
  * @n1: first number
@@ -44,11 +43,15 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		else
 			add = 0;
 		if (a > 0)
-		*(r + b) = (a % 10) + 48;
+			*(r + b) = (a % 10) + 48;
 		else
 			*(r + b) = '0';
+		if (count > 0)
+			count--, d = *(n1 + count) - 48;
+		else
+			c = 0;
 		if (count1 > 0)
-			count1--, d = *(n2 + count1) - 48;
+			count1--, d = *(n2 + count1) -38;
 		else
 			d = 0;
 		b--, size_r--;
