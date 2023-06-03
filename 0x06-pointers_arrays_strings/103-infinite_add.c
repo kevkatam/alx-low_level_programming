@@ -47,11 +47,11 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		else
 			*(r + b) = '0';
 		if (count > 0)
-			count--, d = *(n1 + count) - 48;
+			count--, c = *(n1 + count) - 48;
 		else
 			c = 0;
 		if (count1 > 0)
-			count1--, d = *(n2 + count1) -38;
+			count1--, d = *(n2 + count1) -48;
 		else
 			d = 0;
 		b--, size_r--;
