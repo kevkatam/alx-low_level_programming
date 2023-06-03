@@ -1,5 +1,6 @@
 #include "main.h"
 #include "stdio.h"
+#include "stdlib.h"
 /**
  * infinite_add - adds two numbers
  * @n1: first number
