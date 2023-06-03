@@ -1,4 +1,5 @@
 #include "main.h"
+#include "stdio.h"
 /**
  * infinite_add - adds two numbers
  * @n1: first number
@@ -33,7 +34,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	}
 	r[b + 1] = '\0';
 	count--, count1--, size_r--;
-	c = *(n1 + count) - 48, d = *(n2 + count1) -48;
+	c = *(n1 + count) - 48, d = *(n2 + count1) - 48;
 	while (b >= 0)
 	{
 		a = c + d + add;
