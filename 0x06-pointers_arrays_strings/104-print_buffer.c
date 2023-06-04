@@ -10,7 +10,7 @@ void print_buffer(char *b, int size)
 {
 	int a, c, d;
 
-	if (size <=0)
+	if (size <= 0)
 		printf("\n");
 	else
 	{
