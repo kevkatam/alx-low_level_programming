@@ -14,7 +14,7 @@ int iterator(int n, int i)
 		else
 			return (-1);
 	}
-	return (iterator(n, i + 1));
+	return (0 + iterator(n, i + 1));
 }
 /**
  * _sqrt_recursion - returns the natural square root of a number
