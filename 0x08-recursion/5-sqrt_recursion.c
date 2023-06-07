@@ -7,14 +7,14 @@
  */
 int iterator(int n, int i)
 {
-	if (i % (n % i) == 0)
+	if (i % (n / i) == 0)
 	{
 		if (i * (n / i) == n)
 			return (i);
 		else
 			return (-1);
 	}
-	return (0 + iterator(n, i + 1));
+	return (iterator(n, i + 1));
 }
 /**
  * _sqrt_recursion - returns the natural square root of a number
