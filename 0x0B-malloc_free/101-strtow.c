@@ -1,45 +1,47 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stdio.h>
+
 /**
- * free_gridd - frees a 2 dimensional array
- * @grid: multidimensional array of char
- * @h: height of the array
+ * ch_free_grid - frees a 2 dimensional array.
+ * @grid: multidimensional array of char.
+ * @height: height of the array.
+ *
  * Return: no return
  */
-void free_gridd(char **grid, unsigned int h)
+void ch_free_grid(char **grid, unsigned int height)
 {
-	if (grid != NULL && h != 0)
+	if (grid != NULL && height != 0)
 	{
-		for (; h > 0; h--)
-			free(grid[h]);
-		free(grid[h]);
+		for (; height > 0; height--)
+			free(grid[height]);
+		free(grid[height]);
 		free(grid);
 	}
 }
+
 /**
- * strtow - splits a string into words
- * @str: string
- * Return: a pointer to an array of strings
+ * strtow - splits a string into words.
+ * @str: string.
+ *
+ * Return: pointer of an array of integers
  */
 char **strtow(char *str)
 {
-	char **a;
-	unsigned int c, h, i, j, a1;
+	char **aout;
+	unsigned int c, height, i, j, a1;
 
 	if (str == NULL || *str == '\0')
 		return (NULL);
-
-	for (c = h = 0; str[c] != '0'; c++)
+	for (c = height = 0; str[c] != '\0'; c++)
 		if (str[c] != ' ' && (str[c + 1] == ' ' || str[c + 1] == '\0'))
-			h++;
-	a = malloc((h + 1) * sizeof(char *));
-	if (a == NULL || h == 0)
+			height++;
+	aout = malloc((height + 1) * sizeof(char *));
+	if (aout == NULL || height == 0)
 	{
-		free(a);
+		free(aout);
 		return (NULL);
 	}
-	for (i = a1 = 0; i < h; i++)
+	for (i = a1 = 0; i < height; i++)
 	{
 		for (c = a1; str[c] != '\0'; c++)
 		{
@@ -47,19 +49,19 @@ char **strtow(char *str)
 				a1++;
 			if (str[c] != ' ' && (str[c + 1] == ' ' || str[c + 1] == '\0'))
 			{
-				a[i] = malloc((c - a1 + 2) * sizeof(char));
-				if (a[i] == NULL)
+				aout[i] = malloc((c - a1 + 2) * sizeof(char));
+				if (aout[i] == NULL)
 				{
-					free_gridd(a, i);
+					ch_free_grid(aout, i);
 					return (NULL);
 				}
 				break;
 			}
 		}
 		for (j = 0; a1 <= c; a1++, j++)
-			a[i][j] = str[a1];
-		a[i][j] = '\0';
+			aout[i][j] = str[a1];
+		aout[i][j] = '\0';
 	}
-	a[i] = NULL;
-	return (a);
+	aout[i] = NULL;
+	return (aout);
 }
