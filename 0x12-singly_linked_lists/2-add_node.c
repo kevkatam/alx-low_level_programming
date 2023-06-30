@@ -14,11 +14,11 @@ list_t *add_node(list_t **head, const char *str)
 	if (n == NULL)
 		return (NULL);
 	n->str = strdup(str);
-	
+
 	for (ichar = 0; str[ichar]; ichar++)
 		;
 	n->len = ichar;
 	n->next = *head;
 	*head = n;
 	return (*head);
-}	
+}
