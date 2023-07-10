@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 	file_from = open(argv[1], O_RDONLY);
-	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 664);
+	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
 
 	err_file(file_from, file_to, argv);
 
@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
 		n = read(file_from, buf, 1024);
 		if (n == -1)
 			err_file(-1, 0, argv);
-		wr = write(file_to, buf, 1024);
+		wr = write(file_to, buf, n);
 		if (wr == -1)
 			err_file(0, -1, argv);
 	}
