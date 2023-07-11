@@ -64,7 +64,7 @@ void print_type(char *ptr)
 	if (type == 0)
 		printf("NONE (No file type)\n");
 	else if (type == 1)
-		printf("REL (Relocatble file)\n");
+		printf("REL (Relocatable file)\n");
 	else if (type == 2)
 		printf("EXEC (Executable file)\n:");
 	else if (type == 3)
@@ -99,7 +99,7 @@ void print_osabi(char *ptr)
 	char osabi = ptr[7];
 
 	printf("  OS/ABI:                            ");
-	if (osabi == 9)
+	if (osabi == 0)
 		printf("UNIX - System V\n");
 	else if (osabi == 2)
 		printf("UNIX - NetBSD\n");
