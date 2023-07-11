@@ -119,7 +119,7 @@ void print_data(char *ptr)
 {
 	char data = ptr[5];
 
-	printf("  Data:                              2's compliment");
+	printf("  Data:                              2's complement");
 	if (data == 1)
 		printf(", little endian\n");
 	if (data == 2)
@@ -202,7 +202,7 @@ int main(int argc, char *argv[])
 
 	if (fd < 0)
 	{
-		dprintf(STDERR_FILENO, "Err: File can not be opened\n");
+		dprintf(STDERR_FILENO, "Err: File can not be open\n");
 		exit(98);
 	}
 	lseek(fd, 0, SEEK_SET);
