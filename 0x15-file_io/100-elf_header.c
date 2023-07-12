@@ -66,7 +66,7 @@ void print_type(char *ptr)
 	else if (type == 1)
 		printf("REL (Relocatable file)\n");
 	else if (type == 2)
-		printf("EXEC (Executable file)\n:");
+		printf("EXEC (Executable file)\n");
 	else if (type == 3)
 		printf("DYN (Shared object file)\n");
 	else if (type == 4)
