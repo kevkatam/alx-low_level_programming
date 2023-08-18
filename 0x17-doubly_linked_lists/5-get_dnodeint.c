@@ -27,10 +27,10 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 	j = 0;
 	while (head != NULL)
 	{
-		head = head->next;
-		j++;
 		if (j == index)
 			break;
+		head = head->next;
+		j++;
 	}
 	return (head);
 }
