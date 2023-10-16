@@ -1,4 +1,4 @@
-#0x1A-hash_tables
+# 0x1A-hash_tables
 - Project done during ALX fullstack software engineering course
 - Aim was to learn about:
 	- What is a hash function
