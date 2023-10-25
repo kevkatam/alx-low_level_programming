@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+module containing island_perimeter that
+returns the perimeter of the island described by grid
+"""
+
 
 def island_perimeter(grid):
     """ returns the perimeter of the island described by grid """
