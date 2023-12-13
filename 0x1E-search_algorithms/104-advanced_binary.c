@@ -49,7 +49,7 @@ int advanced_binary(int *array, size_t size, int value)
 
 	i = advanced_b(array, size, value);
 
-	if (i < (int)size && array[i] == value)
-		return (i);
-	return (-1);
+	if (i >= 0 && array[i] != value)
+		return (-1);
+	return (i);
 }
