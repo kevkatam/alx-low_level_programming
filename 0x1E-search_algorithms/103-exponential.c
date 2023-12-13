@@ -23,7 +23,7 @@ int binary_s(int *array, size_t size, int value)
 		mid--;
 
 	if (array[mid] == value)
-		return (mid);
+		return ((int)mid);
 
 	if (array[mid] > value)
 		return (binary_s(array, mid, value));
@@ -41,12 +41,12 @@ int binary_s(int *array, size_t size, int value)
  */
 int binary_search(int *array, size_t size, int value)
 {
-	size_t index;
+	int index;
 
 	index = binary_s(array, size, value);
-	if (index < size && array[index] == value)
-		return (index);
-	return (-1);
+	if (index >= 0 && array[index] != value)
+		return (-1);
+	return (index);
 }
 /**
  * exponential_search - function that searches for a value in a sorted array
